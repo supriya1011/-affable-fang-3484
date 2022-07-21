@@ -1,0 +1,101 @@
+*{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 20px;
+    background-color: rgb(30,144,255);
+    margin-top: 10px;
+}
+.container .heading{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+}
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.container .box-container .box{
+    background-color:white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    display: none;
+    border: 8px solid yellow;
+}
+.container .box-container .box:nth-child(1),
+.container .box-container .box:nth-child(2),
+.container .box-container .box:nth-child(3){
+    display: inline-block;
+}
+
+.container .box-container .box .image{
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 400px;
+    /* padding: 20px;
+    border-radius: 5px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2); */
+}
+.container .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container .box-container .box:hover .image img{
+    transform:scale(1.1);
+}
+.container .box-container .box .content .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid grey;
+}
+.container .box-container .box .content .icons a{
+    font-size: 14px;
+    color: rgb(36, 115, 195);
+}
+.container .box-container .box .content .icons i{
+    padding-right: 10px;
+    color: black;
+}
+.container .box-container .box .content .icons a:hover{
+    text-decoration: underline;
+    /* font-size: 15px; */
+}
+.container #load-more{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid grey;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:grey;
+    cursor: pointer;
+}
+.container #load-more:hover{
+    background-color:rgb(216, 216, 25);
+    border-color: black;
+    color: black;
+}
+@media (max-width:450px){
+    .container.heading{
+        font-size: 25px;
+    }
+    .container.box-container .box .image{
+        height: 200px;
+    }
+    .container.box-container{
+        grid-template-columns: 1fr;
+    }
+    .container.box-container .box .content .icons span{
+        font-size: 12px;
+    }
+}

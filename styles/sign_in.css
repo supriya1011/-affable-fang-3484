@@ -1,0 +1,85 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+} */
+/* body{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.container{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+} 
+
+.form .title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.form .input-field{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-top: 40px;
+}
+.form .input-fields{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+.input-field input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px 5px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    outline: none;
+    box-sizing: border-box;
+    transition: .3s;
+}
+.input-field input:focus{
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px 0 #1e90ff;
+}
+.form .input-fields{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.form a{
+    text-decoration: none;
+    color: #4070f4;
+
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.form .button{
+    margin-top: 35px;
+
+}
+.form .button input{
+    border: none;
+    color: white;
+    background-color: rgb(99, 167, 99);
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 80px;
+    transition: all 0.3s ease;
+}
+.form .button input:hover{
+    background-color: green;
+}
+.form .login-signup{
+    margin-top: 20px;
+    
+}
+
+
+
