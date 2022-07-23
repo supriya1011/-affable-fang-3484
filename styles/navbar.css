@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cormorant SC', serif;
+    /* font-family: 'Cormorant SC', serif; */
 }
 nav{
     display: flex;

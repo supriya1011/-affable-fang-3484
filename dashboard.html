@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dashboard</title>
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./styles/navbar.css"> -->
+    <script src="https://kit.fontawesome.com/d47f1ce933.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">IDEAKART</div>
+        <div class="search_box">
+            <input type="search" placeholder="Search">
+            <label class="icon">
+                <span class="search_button">Search</span>
+            </label>
+           
+        </div>
+        <ol>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
+            <li><a href="./homepage.html">Home</a><script> document.write(localStorage.getItem("name1"));</script></li>
+            <!-- <li><a href="">Sign In</a></li>
+            <li><a href="">Sign Up</a></li> -->
+        </ol>
+
+        <label for="check" class="bar">
+            <span class="fa fa-bars" id="bars"></span>
+            <span class="fa fa-times" id="times"></span>
+        </label>
+    </nav>
+    <div class="form">
+        <input type="text" id="product-name"  placeholder="product name">
+        <textarea name="" id="description" placeholder="Your Experience"></textarea>
+        <div class="product-info">
+            <div class="product-image" id="display_image"><p class="text">product image</p></div>
+            <div class="upload-image-sec">
+                <p class="text"><img src="./img/upload.png" alt="">upload image</p>
+                <div class="upload-catalouge">
+                    <input type="file" class="fileupload" id="first-file-upload-btn" hidden>
+                    <label for="first-file-upload-btn" class="upload-image">Add</label>
+                    <input type="file" class="fileupload" id="second-file-upload-btn" hidden>
+                    <label for="second-file-upload-btn" class="upload-image"></label>
+                    
+                </div>
+            </div>
+            <div class="select-type">
+                <p class="text">Did you bought it online or offline ?</p>
+                <div class="types">
+                    <input type="checkbox" class="type-checkbox" id="online" value="online">
+                    <input type="checkbox" class="type-checkbox" id="offline" value="offline">
+                </div>
+            </div>
+            <div class="product-price">
+                <input type="number" id="actual-price" placeholder="Actual price">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="add-btn">submit</button>
+            </div>
+        </div>
+    </div>
+    <!-- footer-section -->
+    <section class="footer">
+        <p class="heading-footer">
+            Get To Know Us
+        </p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="./homepage.html">Home</a>
+            </li>
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="./contactus.html">Contact</a>
+            </li>
+            <li>
+                <a href="#">Search</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Refund Policy</a>
+            </li>
+            <li>
+                <a href="#">Earn Money Online</a>
+            </li>
+            <li>
+                <a href="#">QuickBuyer</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            Ideakart @ 2022
+        </p>
+    <!-- footer-section -->
+</body>
+<script src="./script/dashboard.js"></script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/contactus.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <script src="https://kit.fontawesome.com/d47f1ce933.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <nav>
+        <div class="logo">IDEAKART</div>
+        <div class="search_box">
+            <input type="search" placeholder="Search">
+            <label class="icon">
+                <span class="search_button">Search</span>
+            </label>
+           
+        </div>
+        <ol>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
+            <li><a href="./sign_in.html">Sign In</a></li>
+            <li><a href="./sign_up.html">Sign Up</a></li>
+        </ol>
+
+        <label for="check" class="bar">
+            <span class="fa fa-bars" id="bars"></span>
+            <span class="fa fa-times" id="times"></span>
+        </label>
+    </nav>
+
+
+    <div class="container">
+        <form action="javascript:sendmail()" method="post">
+            <h1>You can contact our team by filling this form -</h1>
+            <input type="text" id="firstName" placeholder="please enter your First Name*" required>
+            <input type="text" id="lastName" placeholder="please enter your Last Name*" required>
+            <input type="email" id="email" placeholder="please enter your email*" required>
+            <input type="number" id="mobile" placeholder="please enter your Phone number*" required>
+            <h4>Message</h4>
+            <textarea id="msg" required ></textarea>
+            <input type="submit" value="Send message" id="button">
+        </form>
+    </div>
+<!-- footer -->
+<section class="footer">
+    <p class="heading-footer">
+        Get To Know Us
+    </p>
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+    <ul class="list">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li>
+            <a href="#">Search</a>
+        </li>
+        <li>
+            <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="#">Refund Policy</a>
+        </li>
+        <li>
+            <a href="#">Earn Money Online</a>
+        </li>
+        <li>
+            <a href="#">QuickBuyer</a>
+        </li>
+    </ul>
+    <p class="copyright">
+        Ideakart @ 2022
+    </p>
+</section>
+<!-- footer -->
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    function sendmail(){
+let name = $('#firstname').val();
+let lname = $('#lastname').val();
+let email = $('#email').val();
+let number = $('#mobile').val();
+let msg = $('#msg').val();
+
+let Body='Name: '+name+'<br> Email: '+email+'<br>Mobile Number: '+number+'<br>Message: '+msg;
+Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "supriyasahoo1011@gmail.com",
+    Password : "EC0A590924B26A6B66354CBE85DE86E7732F",
+    To : 'supriyasahoo1083@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Mail on contact Form from:"+name,
+    Body : Body
+}).then(
+  message => {
+    if(message==="OK"){
+        alert("Thank You! Your Email has been Send");
+    }
+    else{
+        console.error(message);
+        alert("There is error in Sending message");
+    }
+  }
+
+);
+}
+</script>
+</html>

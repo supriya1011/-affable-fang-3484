@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
+    <script src="https://kit.fontawesome.com/d47f1ce933.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/sign_up.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
     <input type="checkbox" id="check">
@@ -20,8 +23,8 @@
            
         </div>
         <ol>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
             <li><a href="sign_in.html">Sign In</a></li>
             <li><a href="sign_up.html">Sign Up</a></li>
         </ol>
@@ -41,33 +44,109 @@
                 <form action="#">
                     <div class="input-field">
                         <span>Name</span>
-                        <input type="text"placeholder=""  required>
+                        <input type="text"placeholder="" id="name" required>
                     </div>
                     <div class="input-field">
                         <span>Mobile Number</span>
-                        <input type="number"placeholder=""  required>
+                        <input type="number"placeholder="" id="mobilenumber" required>
                     </div>
                     <div class="input-field">
                         <span>Email</span>
-                        <input type="text"placeholder=""  required>
+                        <input type="text"placeholder="" id="email" required>
                     </div>
                     <div class="input-field">
                         <span>Password  (6 chracter minimum)</span>
-                        <input type="password"placeholder=""  required>
+                        <input type="password"placeholder="" id="password" required>
                     </div>
                     <div class="input-field">
                         <span> Confirmation Password</span>
-                        <input type="password"placeholder=""  required>
+                        <input type="password"placeholder="" id="confirm_password" required>
                     </div>
                     <div class="button">
-                        <input type="button" value="Sign up">
+                        <input type="button" onclick="signup()" value="Sign up">
                     </div>
                 </form>
                 <div class="login-signup">
-                    <a href="sign_in.html" class="text signup-text">Log in</a>
+                    <a href="#" class="text signup-text">Log in</a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- footer-section -->
+    <section class="footer">
+        <p class="heading-footer">
+            Get To Know Us
+        </p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Search</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Refund Policy</a>
+            </li>
+            <li>
+                <a href="#">Earn Money Online</a>
+            </li>
+            <li>
+                <a href="#">QuickBuyer</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            Ideakart @ 2022
+        </p>
+    </section>
+    <!-- footer-section -->
 </body>
+
 </html>
+<script>
+    function signup(){
+        let name = document.getElementById("name").value;
+        let mobile = document.getElementById("mobilenumber").value;
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+        let c_pass = document.getElementById("confirm_password").value;
+
+        localStorage.setItem("name1",name);
+        localStorage.setItem("mobile1",mobile);
+        localStorage.setItem("email1",email);
+        localStorage.setItem("pass1",pass);
+        localStorage.setItem("c_pass1",c_pass);
+        
+//         document.querySelector("#submit").addEventListener("click",signup)
+//   let arr=[];
+
+//   function signup(){
+//     event.preventDefault();
+//     let name=document.querySelector("#name").value;
+//     let email=document.querySelector("#email").value;
+//     let password=document.querySelector("#pass").value;
+//     let obj={
+//       fullName:name,
+//       EmailL:email,
+//       pass:password
+//     }
+//     arr.push(obj);
+//     console.log(arr);
+//     localStorage.setItem("addData",JSON.stringify(arr));
+
+//   }
+    }
+</script>

@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn Page</title>
+    <script src="https://kit.fontawesome.com/d47f1ce933.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/sign_in.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
     <input type="checkbox" id="check">
@@ -20,8 +23,8 @@
            
         </div>
         <ol>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contactus.html">Contact</a></li>
             <li><a href="sign_in.html">Sign In</a></li>
             <li><a href="sign_up.html">Sign Up</a></li>
         </ol>
@@ -40,11 +43,11 @@
                 <form action="#">
                     <div class="input-field">
                         <span>Email</span>
-                        <input type="text"placeholder=""  required>
+                        <input type="text"placeholder="" id="email" required>
                     </div>
                     <div class="input-field">
                         <span>Password</span>
-                        <input type="password"placeholder=""  required>
+                        <input type="password"placeholder="" id="password" required>
                     </div>
                     <div class="input-fields">
                         <div class="checkbox-content">
@@ -54,15 +57,88 @@
                         <!-- <a href="#">Forgot password?</a>                            -->
                     </div>
                     <div class="input-field button">
-                        <input type="button" value="Log in">
+                        <input type="button" onclick="login()" value="Log in">
                     </div>
                 </form>
                 <div class="login-signup">
-                    <a href="sign_up.html" class="text signup-text">Sign up</a>
+                    <a href="" class="text signup-text">Sign up</a>
                 </div>
                 <a href="#">Forgot password?</a>
             </div>
         </div>
     </div>
+    <!-- footer-section -->
+    <section class="footer">
+        <p class="heading-footer">
+            Get To Know Us
+        </p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Search</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#">Refund Policy</a>
+            </li>
+            <li>
+                <a href="#">Earn Money Online</a>
+            </li>
+            <li>
+                <a href="#">QuickBuyer</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            Ideakart @ 2022
+        </p>
+    </section>
+    <!-- footer-section -->
 </body>
 </html>
+<script>
+    function login(){
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+
+        let email1 = localStorage.getItem("email1");
+        let pass1 = localStorage.getItem("pass1");
+
+        if(email==email1 && pass==pass1){
+            window.location.href="dashboard.html";
+        }
+        else{
+            alert("email and password is incorrect");
+        }
+//         let data=JSON.parse(localStorage.getItem("addData"))
+//   //console.log(data);
+// document.querySelector("#submit").addEventListener("click",signin)
+// function signin(){
+//   let email=document.querySelector("#email").value;
+//   let pass=document.querySelector("#pass").value;
+//     event.preventDefault();
+//     data.forEach(function(elem,index){
+//       console.log(email)
+//       if(email==elem.EmailL&&pass==elem.pass){
+//         alert("successfully login");
+//       }
+//       else{
+//         alert("input value are invalid");
+//       }
+//     })
+    }
+</script>
