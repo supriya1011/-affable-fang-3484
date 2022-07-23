@@ -1,8 +1,15 @@
 *{
     text-decoration: none;
 }
+html,
+body{
+    height: 100%;
+}
+.page-wrapper{
+    min-height: 100%;
+}
 .container{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     padding: 25px 20px;
